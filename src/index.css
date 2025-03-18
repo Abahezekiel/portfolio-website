@@ -1,0 +1,23 @@
+/* This imports Tailwind's base styles */
+@tailwind base;
+
+/* This imports Tailwind's component styles */
+@tailwind components;
+
+/* This imports Tailwind's utility styles */
+@tailwind utilities;
+
+
+@layer base {
+  .dark {
+    background-color: #1a1a1a; 
+    color: white; 
+  }
+}
+
+.dark .bg-black {
+  background-color: #1a1a1a;
+}
+.dark .text-white {
+  color: white;
+}
