@@ -12,7 +12,7 @@ const About = () => {
         />
       </div>
       <div className="flex flex-col justify-center ml-4">
-        <button className="bg-gradient-to-r from-orange-400 to-orange-600 w-32 p-2 rounded-md font-bold">
+        <button className="bg-gradient-to-r from-orange-400 to-orange-600 w-32 p-2 rounded-md font-bold  md:w-auto mx-auto">
           ABOUT ME
         </button>
 
