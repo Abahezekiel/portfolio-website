@@ -50,33 +50,34 @@ const Contact = () => {
   };
 
   return (
-    <div className="items-center justify-center flex p-8  flex-col ">
+    <div className="items-center justify-center flex p-8 flex-col ">
       <button className="bg-gradient-to-r from-orange-400 to-orange-600 p-2 rounded-md font-bold text-white">
         CONTACT ME
       </button>
-      <div className="bg-[#1a1a1a]  p-8 mt-8 mb-8 ">
-        <form  action="https://getform.io/f/bllyegwb" method="POST">
-          <div className="flex gap-3 mb-2 ">
-            <div>
+      <div className="bg-[#1a1a1a] p-8 mt-8 mb-8">
+        <form action="https://getform.io/f/bllyegwb" method="POST">
+          <div className="flex flex-col sm:flex-row gap-6 mb-4">
+            {/* Name and Email Fields */}
+            <div className="flex flex-col sm:w-1/2 w-full">
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 placeholder="Name*"
-                className="border-2 p-2 w-full"
+                className="border-2 p-2 w-full mb-2"
                 onChange={handleChange}
               />
               {errors.name && (
                 <span className="text-red-500 text-xs">{errors.name}</span>
               )}
             </div>
-            <div>
+            <div className="flex flex-col sm:w-1/2 w-full">
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 placeholder="Email*"
-                className="border-2 p-2 w-full"
+                className="border-2 p-2 w-full mb-2"
                 onChange={handleChange}
               />
               {errors.email && (
@@ -85,7 +86,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mb-2">
+          {/* Message Field */}
+          <div className="mb-4">
             <textarea
               name="message"
               value={formData.message}
@@ -96,11 +98,15 @@ const Contact = () => {
             {errors.message && (
               <span className="text-red-500 text-xs">{errors.message}</span>
             )}
-           
           </div>
-          <button className="bg-gradient-to-r from-orange-400 to-orange-600 w-full p-2 rounded-md font-bold text-white" type="submit">
-              Send
-            </button>
+
+          {/* Submit Button */}
+          <button
+            className="bg-gradient-to-r from-orange-400 to-orange-600 w-full sm:w-auto p-2 rounded-md font-bold text-white"
+            type="submit"
+          >
+            Send
+          </button>
         </form>
       </div>
     </div>
