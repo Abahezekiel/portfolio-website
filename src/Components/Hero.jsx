@@ -46,7 +46,7 @@ const Hero = () => {
         <img
           src={image1} // Corrected the src path
           alt="Ezekiel"
-          className="h-72 w-72 rounded-full border-4 border-[#ff4f00] sm:h-80 sm:w-80 md:h-96 md:w-96 md:w-auto mx-auto"
+          className=" rounded-full border-4 border-[#ff4f00] sm:h-80 sm:w-80 md:h-96 md:w-auto mx-auto lg:h-72 lg:w-72"
         />
       </div>
     </div>
